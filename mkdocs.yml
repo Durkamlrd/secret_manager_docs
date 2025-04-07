@@ -1,29 +1,29 @@
-site_name: My MkDocs Material Documentation
+site_name: Guard Documentation
 site_url: https://sitename.example
 theme:
   name: material
   font:
     text: Merriweather Sans
     code: Red Hat Mono
-  logo: assets/logo.png
-  favicon: assets/favicon.ico
+  logo: assets/LogoSSWithoutBG.png
+  favicon: assets/LogoSSWithoutBG.png
   features:
     - navigation.footer
   palette:
-    # Dark Mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: green
-      accent: deep purple
+    # # Dark Mode
+    # - scheme: slate
+    #   toggle:
+    #     icon: material/weather-sunny
+    #     name: Dark mode
+    #   primary: white
+    #   accent: deep purple
 
     # Light Mode
     - scheme: default
       toggle:
         icon: material/weather-night
         name: Light mode
-      primary: blue
+      primary: purple
       accent: deep orange
 
 markdown_extensions:
