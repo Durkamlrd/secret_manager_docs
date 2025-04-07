@@ -1,5 +1,7 @@
 site_name: Guard Documentation
 site_url: https://sitename.example
+docs_dir: docs_src
+
 theme:
   name: material
   font:

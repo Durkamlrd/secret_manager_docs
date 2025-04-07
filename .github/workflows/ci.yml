@@ -3,8 +3,8 @@ name: ci
 on:
   push:
     branches:
-      - master
       - main
+      - master
 
 permissions:
   contents: write
@@ -24,19 +24,20 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.x
+          python-version: '3.x'
 
       - name: Install MkDocs and Material Theme
         run: pip install mkdocs-material
 
-      - name: Build MkDocs Site to 'docs-site' Folder
-        run: mkdocs build --site-dir docs-site
+      - name: Build MkDocs Site into 'docs' Folder
+        run: mkdocs build --site-dir docs
 
-      - name: Commit Built Site Folder to Branch
+      - name: Commit Built Site Folder
         run: |
-          git add docs-site
-          git commit -m "Deploy MkDocs site to docs-site folder" || echo "No changes to commit"
-          git push
+          git add docs
+          git commit -m "Deploy MkDocs site to docs folder" || echo "No changes to commit"
+          git push origin HEAD
+
 
 
 
